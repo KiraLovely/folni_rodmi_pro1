@@ -1,7 +1,9 @@
-School Project for PROTO2 3TPIF2 2026.\
-Project is done by Miguel and Nils
+*School Project for PROTO2 3TPIF2 2026.*\
+Project is realised by Miguel Tomas Cardoso and Nils Folschette,\
+for the PROTO2 cours in the degree: 3TPIF2 at "Lycée des Arts et Métiers".
 
-Project is done over NodeRed on a Raspberry Pi 5,
-other important aspects include: Discord Bot intergration, Minecraft Server intergration and use of the "DigiLab" GPIO Test/Fun Board.\
+Project is done over NodeRed, mainly on a Raspberry Pi 5,\
+important aspects and modules include: Discord Bot intergration (API), Minecraft Server intergration, NodeRed Dashboard and use of the "DigiLab" GPIO Test/Fun Board.\
+
 ---------------------------------------------------------------------------------------------------------------------------------\
-[Beschreibung des Projekts](./PROJDESCR.md)
+[Project description](./PROJDESCR.md)
