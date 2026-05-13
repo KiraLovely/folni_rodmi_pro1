@@ -6,5 +6,5 @@ Project is done over NodeRed, mainly on a Raspberry Pi 5,\
 important aspects and modules include: Discord Bot intergration (API), Minecraft Server intergration, NodeRed Dashboard and use of the "DigiLab" GPIO Test/Fun Board.
 
 ---------------------------------------------------------------------------------------------------------------------------------\
-[Project description](./PROJDESCR.md)
+[Project description](./PROJDESCR.md)\
 [Issues we couldn't resolve](./ERROR)
