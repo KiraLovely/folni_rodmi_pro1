@@ -7,3 +7,4 @@ important aspects and modules include: Discord Bot intergration (API), Minecraft
 
 ---------------------------------------------------------------------------------------------------------------------------------\
 [Project description](./PROJDESCR.md)
+[Issues we couldn't resolve](./ERROR)
