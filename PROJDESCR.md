@@ -1,6 +1,6 @@
 The project focuses on intergrating different programms and hardware into a Minecraft Server.\
 The whole project is tracked and documented on GitHub, which is new for the course.
-\
+
 
 The MC Server is hosted on a Raspberry Pi 5, in a docker enviorment.\
 The MC Server is a simple "PVP Arena Map", with multiple arenas players can fight in.
