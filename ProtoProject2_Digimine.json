@@ -1,0 +1,2355 @@
+[
+    {
+        "id": "aa9b525124649506",
+        "type": "tab",
+        "label": "Proto Prcjt 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e0e07033ed4abf91",
+        "type": "discordMessageManager",
+        "z": "aa9b525124649506",
+        "name": "Output",
+        "channel": "1235199007588880426",
+        "token": "",
+        "x": 550,
+        "y": 40,
+        "wires": [
+            [
+                "1ba3a699399fdeb6"
+            ]
+        ]
+    },
+    {
+        "id": "1ba3a699399fdeb6",
+        "type": "debug",
+        "z": "aa9b525124649506",
+        "name": "Server msg Send",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "39b6e9662484561e",
+        "type": "inject",
+        "z": "aa9b525124649506",
+        "name": "Bot Test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "channel",
+                "v": "1431763203951431772",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "I am Gurt!! :stuck_out_tongue:",
+        "payloadType": "str",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "5bea5881344f1289"
+            ]
+        ]
+    },
+    {
+        "id": "eab95bc796ee2178",
+        "type": "discordMessage",
+        "z": "aa9b525124649506",
+        "name": "Read",
+        "channelIdFilter": "1235199007588880426",
+        "token": "",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "80d2afafc5df0e6b",
+                "1bc98f40e36ffa28"
+            ]
+        ]
+    },
+    {
+        "id": "80d2afafc5df0e6b",
+        "type": "debug",
+        "z": "aa9b525124649506",
+        "name": "Message Received",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1bc98f40e36ffa28",
+        "type": "switch",
+        "z": "aa9b525124649506",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "hello gurt",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Hello gurt",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "c13bea5d3aca7e08"
+            ],
+            [
+                "c13bea5d3aca7e08"
+            ]
+        ]
+    },
+    {
+        "id": "c13bea5d3aca7e08",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Hii I'm Gurt! Nice to meet you!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "e0e07033ed4abf91"
+            ]
+        ]
+    },
+    {
+        "id": "753cdd99647130f4",
+        "type": "serverinfo",
+        "z": "aa9b525124649506",
+        "name": "",
+        "server": "fd5f6f0b6d5b0e2e",
+        "x": 390,
+        "y": 720,
+        "wires": [
+            [
+                "082b8e7919a3c800",
+                "7064840e11dc659c",
+                "7ccbc3a8ef6f2fd5",
+                "541e7bda24cce60d"
+            ]
+        ]
+    },
+    {
+        "id": "192d645a057b3b21",
+        "type": "discordMessageManager",
+        "z": "aa9b525124649506",
+        "name": "",
+        "channel": "1465824384047513795",
+        "token": "",
+        "x": 850,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "127e0cfac3bda150",
+        "type": "inject",
+        "z": "aa9b525124649506",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "180",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 230,
+        "y": 760,
+        "wires": [
+            [
+                "753cdd99647130f4"
+            ]
+        ]
+    },
+    {
+        "id": "082b8e7919a3c800",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "Version Check",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.version",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 840,
+        "wires": [
+            [
+                "d657d06eb584f079"
+            ]
+        ]
+    },
+    {
+        "id": "7064840e11dc659c",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "Online Player Check",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.online",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 880,
+        "wires": [
+            [
+                "d2245d2b9681d771"
+            ]
+        ]
+    },
+    {
+        "id": "5bea5881344f1289",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "Bot Test",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "https://tenor.com/view/monkey-thinking-monkey-thinking-think-money-gif-9734025314392564509",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 40,
+        "wires": [
+            [
+                "e0e07033ed4abf91"
+            ]
+        ]
+    },
+    {
+        "id": "d2245d2b9681d771",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "Online Players",
+        "func": "msg.payload = \"Online Players: \" + String(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 880,
+        "wires": [
+            [
+                "192d645a057b3b21"
+            ]
+        ]
+    },
+    {
+        "id": "d657d06eb584f079",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "Current Version",
+        "func": "msg.payload = \"Current Version: \" + String(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 840,
+        "wires": [
+            [
+                "192d645a057b3b21"
+            ]
+        ]
+    },
+    {
+        "id": "7ccbc3a8ef6f2fd5",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "Player Names",
+        "func": "msg.payload = \n\"Player Names: \" + msg.payload.players.map(p => p.name);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 800,
+        "wires": [
+            [
+                "192d645a057b3b21"
+            ]
+        ]
+    },
+    {
+        "id": "541e7bda24cce60d",
+        "type": "delay",
+        "z": "aa9b525124649506",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 920,
+        "wires": [
+            [
+                "cc99e251c2f004fa"
+            ]
+        ]
+    },
+    {
+        "id": "cc99e251c2f004fa",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "EndNotif",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "------------------------------------------------",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 920,
+        "wires": [
+            [
+                "192d645a057b3b21"
+            ]
+        ]
+    },
+    {
+        "id": "67c70af424e8a1cd",
+        "type": "comment",
+        "z": "aa9b525124649506",
+        "name": "Server Stats",
+        "info": "",
+        "x": 230,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b1383e0207734ba4",
+        "type": "comment",
+        "z": "aa9b525124649506",
+        "name": "msg writer",
+        "info": "",
+        "x": 100,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c4afc1348dbf08b3",
+        "type": "discordMessage",
+        "z": "aa9b525124649506",
+        "name": "msg",
+        "channelIdFilter": "1465824299112988725",
+        "token": "",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "d25ae0d732350c71"
+            ]
+        ]
+    },
+    {
+        "id": "d25ae0d732350c71",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "msg maker",
+        "func": "msg.payload = \"/msg \" + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "f9766054f577956b"
+            ]
+        ]
+    },
+    {
+        "id": "f9766054f577956b",
+        "type": "rcon",
+        "z": "aa9b525124649506",
+        "name": "",
+        "server": "fd5f6f0b6d5b0e2e",
+        "command": "",
+        "x": 290,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "266fba74aef8c154",
+        "type": "comment",
+        "z": "aa9b525124649506",
+        "name": "admin commands",
+        "info": "",
+        "x": 110,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f3e0e94e2be89ee9",
+        "type": "discordMessage",
+        "z": "aa9b525124649506",
+        "name": "admin commands",
+        "channelIdFilter": "1465824342687613113",
+        "token": "",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "8e476443fc89d4c2"
+            ]
+        ]
+    },
+    {
+        "id": "8e476443fc89d4c2",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "msg maker",
+        "func": "msg.payload = \"/\" + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "847eee3baae24223"
+            ]
+        ]
+    },
+    {
+        "id": "847eee3baae24223",
+        "type": "rcon",
+        "z": "aa9b525124649506",
+        "name": "",
+        "server": "fd5f6f0b6d5b0e2e",
+        "command": "",
+        "x": 270,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c8028c3518b141c",
+        "type": "exec",
+        "z": "aa9b525124649506",
+        "command": "docker logs -f minecraft",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 170,
+        "y": 540,
+        "wires": [
+            [
+                "ac10abdd47627978",
+                "0f2dc4f530369d3c"
+            ],
+            [
+                "ac10abdd47627978"
+            ],
+            [
+                "ac10abdd47627978"
+            ]
+        ]
+    },
+    {
+        "id": "0d8d3b31359c1bda",
+        "type": "comment",
+        "z": "aa9b525124649506",
+        "name": "Server Logs",
+        "info": "",
+        "x": 130,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c0f9d48ab4ac6685",
+        "type": "inject",
+        "z": "aa9b525124649506",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 70,
+        "y": 500,
+        "wires": [
+            [
+                "8c8028c3518b141c"
+            ]
+        ]
+    },
+    {
+        "id": "ac10abdd47627978",
+        "type": "debug",
+        "z": "aa9b525124649506",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0f2dc4f530369d3c",
+        "type": "discordMessageManager",
+        "z": "aa9b525124649506",
+        "name": "",
+        "channel": "1467159032643977300",
+        "token": "",
+        "x": 410,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b68f7c93941d159a",
+        "type": "comment",
+        "z": "aa9b525124649506",
+        "name": "Minigame 1 - Roulette",
+        "info": "",
+        "x": 160,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "e753eafe6cb8d36b",
+        "type": "discordMessage",
+        "z": "aa9b525124649506",
+        "name": "roulette play",
+        "channelIdFilter": "1467163932518252686",
+        "token": "",
+        "x": 130,
+        "y": 1860,
+        "wires": [
+            [
+                "b2045a10bb0ee072"
+            ]
+        ]
+    },
+    {
+        "id": "b2045a10bb0ee072",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "function 9",
+        "func": "const bet = parseInt(msg.payload);\nconst winningNumber = Math.floor(Math.random() * 37);\n\nmsg.bet = bet;\nmsg.result = winningNumber;\nmsg.win = (bet === winningNumber);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 1920,
+        "wires": [
+            [
+                "9a9826a10cb0118a"
+            ]
+        ]
+    },
+    {
+        "id": "2d935a05dcb83441",
+        "type": "rcon",
+        "z": "aa9b525124649506",
+        "name": "",
+        "server": "fd5f6f0b6d5b0e2e",
+        "command": "",
+        "x": 770,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe14e710b32877b7",
+        "type": "discordMessageManager",
+        "z": "aa9b525124649506",
+        "name": "1467163932518252686",
+        "channel": "",
+        "token": "",
+        "x": 530,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a9826a10cb0118a",
+        "type": "switch",
+        "z": "aa9b525124649506",
+        "name": "",
+        "property": "win",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 170,
+        "y": 1960,
+        "wires": [
+            [
+                "7285f2ac12f7e2f0"
+            ],
+            [
+                "13b811a445894eb4"
+            ]
+        ]
+    },
+    {
+        "id": "13b811a445894eb4",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "function 10",
+        "func": "msg.payload = msg.bet + \"! You win!\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1900,
+        "wires": [
+            [
+                "fe14e710b32877b7",
+                "8e20d387478a154f"
+            ]
+        ]
+    },
+    {
+        "id": "7285f2ac12f7e2f0",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "function 11",
+        "func": "msg.payload = \"You lose! The winning number was \" + msg.result\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1860,
+        "wires": [
+            [
+                "fe14e710b32877b7",
+                "168c355c703ed2aa"
+            ]
+        ]
+    },
+    {
+        "id": "168c355c703ed2aa",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "function 12",
+        "func": "msg.payload = \"/clear @a minecraft:diamond 5\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1840,
+        "wires": [
+            [
+                "2d935a05dcb83441"
+            ]
+        ]
+    },
+    {
+        "id": "8e20d387478a154f",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "function 13",
+        "func": "msg.bet = 2 * msg.bet;\n\nmsg.payload = \"/give @a minecraft:diamond 25\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1940,
+        "wires": [
+            [
+                "2d935a05dcb83441"
+            ]
+        ]
+    },
+    {
+        "id": "100ed31f3d6bf2b2",
+        "type": "comment",
+        "z": "aa9b525124649506",
+        "name": "Extra User commands",
+        "info": "",
+        "x": 560,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "462fb612ae6e4460",
+        "type": "discordMessage",
+        "z": "aa9b525124649506",
+        "name": "extra commands",
+        "channelIdFilter": "1467172493092589683",
+        "token": "",
+        "x": 540,
+        "y": 240,
+        "wires": [
+            [
+                "2082a3a236011a9e"
+            ]
+        ]
+    },
+    {
+        "id": "2082a3a236011a9e",
+        "type": "switch",
+        "z": "aa9b525124649506",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "spawn",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "hungry",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "heal",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 510,
+        "y": 320,
+        "wires": [
+            [
+                "f61fd8136b07cf2b",
+                "a6ad3acd059e6562"
+            ],
+            [
+                "8037550fa0fa821d",
+                "35cc8fe114d92a4a"
+            ],
+            [
+                "713fffe26a40645f",
+                "f9f9d4492c3db8df",
+                "d861bf3ba2aa533e"
+            ]
+        ]
+    },
+    {
+        "id": "f61fd8136b07cf2b",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/tp @a 0 63 0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 280,
+        "wires": [
+            [
+                "94f0b19f6836f363"
+            ]
+        ]
+    },
+    {
+        "id": "94f0b19f6836f363",
+        "type": "rcon",
+        "z": "aa9b525124649506",
+        "name": "",
+        "server": "fd5f6f0b6d5b0e2e",
+        "command": "",
+        "x": 990,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1e7280bdcf08c3d",
+        "type": "discordMessageManager",
+        "z": "aa9b525124649506",
+        "name": "",
+        "channel": "1467172493092589683",
+        "token": "",
+        "x": 1050,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a6ad3acd059e6562",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Send you to spawn! Good luck!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "e1e7280bdcf08c3d"
+            ]
+        ]
+    },
+    {
+        "id": "8037550fa0fa821d",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/give @a minecraft:bread 32",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 360,
+        "wires": [
+            [
+                "94f0b19f6836f363"
+            ]
+        ]
+    },
+    {
+        "id": "35cc8fe114d92a4a",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Here is some bread! Don't starve on us!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 380,
+        "wires": [
+            [
+                "e1e7280bdcf08c3d"
+            ]
+        ]
+    },
+    {
+        "id": "713fffe26a40645f",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/effect give @a minecraft:regeneration 15 2 true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 440,
+        "wires": [
+            [
+                "94f0b19f6836f363"
+            ]
+        ]
+    },
+    {
+        "id": "f9f9d4492c3db8df",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Don't die!! Here, I'll heal you up right away!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 460,
+        "wires": [
+            [
+                "e1e7280bdcf08c3d"
+            ]
+        ]
+    },
+    {
+        "id": "d861bf3ba2aa533e",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/effect give @a minecraft:resistance 30 1 true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 480,
+        "wires": [
+            [
+                "94f0b19f6836f363"
+            ]
+        ]
+    },
+    {
+        "id": "6eed847009ba1a5f",
+        "type": "comment",
+        "z": "aa9b525124649506",
+        "name": "Ask Gurt! Talk with Chatgpt",
+        "info": "",
+        "x": 190,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "aba3c3025c0a9d74",
+        "type": "discordMessage",
+        "z": "aa9b525124649506",
+        "name": "ask gurt channel",
+        "channelIdFilter": "1467176919228485653",
+        "token": "",
+        "x": 160,
+        "y": 1040,
+        "wires": [
+            [
+                "9aa9459a38db2f8f"
+            ]
+        ]
+    },
+    {
+        "id": "9aa9459a38db2f8f",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "OpenAi get",
+        "func": "msg.payload = {\n    model: \"gpt-4o-mini\",\n    messages: [\n        { role: \"system\", content: \"You are a helpful AI assistant named Gurt. You're purpose is to answer questions and help out people mainly in the game Minecraft.\" },\n        { role: \"user\", content: msg.payload }\n    ]\n};\nmsg.headers = {\n    \"Content-Type\": \"application/json\",\n    \"Authorization\": ''\n};\nmsg.url = \"https://api.openai.com/v1/chat/completions\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1080,
+        "wires": [
+            [
+                "01aab02b5eae1cca"
+            ]
+        ]
+    },
+    {
+        "id": "01aab02b5eae1cca",
+        "type": "http request",
+        "z": "aa9b525124649506",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 270,
+        "y": 1120,
+        "wires": [
+            [
+                "282b5ba830c018e5",
+                "86948f3a793f1359"
+            ]
+        ]
+    },
+    {
+        "id": "282b5ba830c018e5",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "function 14",
+        "func": "if (msg.payload && msg.payload.choices && msg.payload.choices[0] && msg.payload.choices[0].message) {\n    msg.payload = msg.payload.choices[0].message.content;\n} else if (msg.payload && msg.payload.error && msg.payload.error.message) {\n    msg.payload = \"⚠️ OpenAI Error: \" + msg.payload.error.message;\n} else {\n    msg.payload = \"⚠️ Unexpected response from OpenAI API.\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1120,
+        "wires": [
+            [
+                "6cae10f2570efed2"
+            ]
+        ]
+    },
+    {
+        "id": "6cae10f2570efed2",
+        "type": "discordMessageManager",
+        "z": "aa9b525124649506",
+        "name": "",
+        "channel": "1467176919228485653",
+        "token": "",
+        "x": 730,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86948f3a793f1359",
+        "type": "debug",
+        "z": "aa9b525124649506",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "e6241c4bb6b60128",
+        "type": "comment",
+        "z": "aa9b525124649506",
+        "name": "Random Event",
+        "info": "",
+        "x": 180,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "86bb15f8dda39716",
+        "type": "discordMessage",
+        "z": "aa9b525124649506",
+        "name": "Mystery",
+        "channelIdFilter": "1467191132147552306",
+        "token": "",
+        "x": 150,
+        "y": 1240,
+        "wires": [
+            [
+                "bfcc0524bc0d5a80"
+            ]
+        ]
+    },
+    {
+        "id": "bfcc0524bc0d5a80",
+        "type": "switch",
+        "z": "aa9b525124649506",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "surprise",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 1240,
+        "wires": [
+            [
+                "a0fe07b79e5e644e"
+            ]
+        ]
+    },
+    {
+        "id": "a0fe07b79e5e644e",
+        "type": "function",
+        "z": "aa9b525124649506",
+        "name": "Random Number 15",
+        "func": "msg.number15 = Math.floor(Math.random() * 15) + 1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 1280,
+        "wires": [
+            [
+                "884eab9357248831"
+            ]
+        ]
+    },
+    {
+        "id": "884eab9357248831",
+        "type": "switch",
+        "z": "aa9b525124649506",
+        "name": "",
+        "property": "number15",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "13",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "14",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 15,
+        "x": 210,
+        "y": 1480,
+        "wires": [
+            [
+                "8d3ee0fb36c21b15",
+                "fbf3e53602ee8dc0",
+                "eb5ca63845bdeeb0"
+            ],
+            [
+                "a5d305c9129e2d43",
+                "8180cf2210e0b69c"
+            ],
+            [
+                "d8e58a0ba6a67c5d",
+                "a0344f0349bd837b",
+                "61943fb3736739eb"
+            ],
+            [
+                "561fb26b7e298f0b",
+                "47316005cd528dc4"
+            ],
+            [
+                "35a06c39fe969eac",
+                "9916644de207852a"
+            ],
+            [
+                "52b155f09551bc99",
+                "a6d595b93eb032d6"
+            ],
+            [
+                "ce2369d3dd103934",
+                "93adeb38fb1bfcb8"
+            ],
+            [
+                "02b3f1c36f86d5ee",
+                "95673bc38a06b894"
+            ],
+            [
+                "d5e00982544db05d",
+                "badef918fccb6b57"
+            ],
+            [
+                "1cf013e7719be20b",
+                "ec33022659796aaa"
+            ],
+            [
+                "11c98bbed33d8228",
+                "80cdafe66c2697b9"
+            ],
+            [
+                "a1978792c111b64a",
+                "2529452b9570a84e"
+            ],
+            [
+                "782d1e448d8861fb",
+                "5fe911268ebab266"
+            ],
+            [
+                "1bd60cd35fd0d2d9",
+                "f2620854124407b9"
+            ],
+            [
+                "8891770f8ba8831f",
+                "2f087cae0273cd06"
+            ]
+        ]
+    },
+    {
+        "id": "8d3ee0fb36c21b15",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/time set night",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1300,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "8b26c7be6674ffaf",
+        "type": "rcon",
+        "z": "aa9b525124649506",
+        "name": "",
+        "server": "fd5f6f0b6d5b0e2e",
+        "command": "",
+        "x": 830,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fbf3e53602ee8dc0",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/weather thunder",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1320,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "eb5ca63845bdeeb0",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "THE NIGHT IS COMING. THUNDER IS RISING",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1340,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "89944a5efe232bcf",
+        "type": "discordMessageManager",
+        "z": "aa9b525124649506",
+        "name": "",
+        "channel": "1467191132147552306",
+        "token": "",
+        "x": 890,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5d305c9129e2d43",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/clear @a",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1380,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "8180cf2210e0b69c",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Woops.. you weren't \"clear\" enough.HAHA",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1400,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "d8e58a0ba6a67c5d",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/time set day",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1440,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "61943fb3736739eb",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/weather clear",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1460,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "a0344f0349bd837b",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "As clear as day..",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1480,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "561fb26b7e298f0b",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/give @a minecraft:diamond 64",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1520,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "47316005cd528dc4",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Be rich! Take them!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1540,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "35a06c39fe969eac",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/clear @a minecraft:diamond",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1580,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "9916644de207852a",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Oh.. I hope you weren't carrying any diamonds",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1600,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "52b155f09551bc99",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/effect give @a minecraft:bad_omen infinite 5 false",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1640,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "a6d595b93eb032d6",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Villagers hate you",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1660,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "ce2369d3dd103934",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/effect give @a minecraft:haste 60 2 true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1700,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "93adeb38fb1bfcb8",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Wow, who made you so fast as mining?",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1720,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "02b3f1c36f86d5ee",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/effect give @a minecraft:glowing infinite 1 false",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1300,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "95673bc38a06b894",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "You're like a star! Way too bright hehe",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1320,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "d5e00982544db05d",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/effect give @a minecraft:hero_of_the_village 900 5 false",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1360,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "badef918fccb6b57",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "You're the villager hero of the day!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1380,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "1cf013e7719be20b",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/execute at @a run summon minecraft:lightning_bolt",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1420,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "ec33022659796aaa",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "You were struck by lightning!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1440,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "11c98bbed33d8228",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/execute at @a run summon minecraft:allay",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1480,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "80cdafe66c2697b9",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "A little helper has turned your way..",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1500,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "a1978792c111b64a",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/execute at @a run summon minecraft:oak_boat",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1540,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "2529452b9570a84e",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Boat.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1560,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "782d1e448d8861fb",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/execute at @a run summon minecraft:creeper",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1600,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "5fe911268ebab266",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Aww man!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1620,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "1bd60cd35fd0d2d9",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/kick @a Shouldn't have went for the surprise..",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1660,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "f2620854124407b9",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Ow! Someone kicked me!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1680,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "8891770f8ba8831f",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "command",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "/ban Girl88",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1720,
+        "wires": [
+            [
+                "8b26c7be6674ffaf"
+            ]
+        ]
+    },
+    {
+        "id": "2f087cae0273cd06",
+        "type": "change",
+        "z": "aa9b525124649506",
+        "name": "message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Now that! Is funny",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1740,
+        "wires": [
+            [
+                "89944a5efe232bcf"
+            ]
+        ]
+    },
+    {
+        "id": "fd5f6f0b6d5b0e2e",
+        "type": "serverconfig",
+        "host": "localhost",
+        "rconPort": 25575,
+        "rconPassword": "change_me"
+    },
+    {
+        "id": "1f37f81236f6301e",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-discord-advanced": "3.6.0",
+            "@tomsith/node-red-contrib-minecraft": "0.7.7"
+        }
+    }
+]
