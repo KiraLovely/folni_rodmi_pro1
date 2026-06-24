@@ -16,9 +16,9 @@ Button - No Toggle  -                         Toggle S4 -             Toggle S3 
 S5 -     TP Arena 1 -                         Turns Day -             Spawn 5x Zombies -      Gives 1x Notch Apple
 S6 -     TP Arena 2 -                         Turns Night -           Spawn 5x Skeletons -    Makes Players Invisble
 S7 -     TP Arena 3 -                         Turns Sunset -          Spawn 3x Witches -      Heal ALL Players
-S8 -     TP Arena 4 -                         Weather Rain -          Spawn 5x Spiders -      Gives a random GOOGD effect
-S1 -     Clears Inventory -                   Weather Rain -          Spawn 5x CaveSpiders -  Clears ALL inventory and gives 3x Stacks Snowballs
-S2 -     Get Kit -                            Weather Thunderstorm -  Spawn 3x Blaze -        TP ALL Players to Arena 5 (End Island) with active Ender Dragon
+S8 -     TP Arena 4 -                         Weather Rain -          Spawn 5x Spiders -      Gives a random GOOD effect
+S1 -     Clears Inventory -                   
+S2 -     Get Kit -                            
 
 
 Kit - Iron Sword/bow/64xArrows/Iron Helmet/Iron Chestplate/Iron Leggings/Iron Boots/64xGold Apples/Shield/
